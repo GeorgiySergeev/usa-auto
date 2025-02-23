@@ -12,7 +12,7 @@
       name="description"
       content="Ремонт люкс авто, предпродажная подготовка"
     />
-    <link rel="canonical" href="index.html" />
+    <link rel="canonical" href="index.htm" />
     <meta property="og:locale" content="uk_UA" />
     <meta property="og:locale:alternate" content="ru_RU" />
     <meta property="og:type" content="website" />
@@ -42,41 +42,39 @@
 
     <!-- Core Style -->
 
-    <link rel="stylesheet" href="./assets/scss/style.scss" />
+    <link rel="stylesheet" href="./assets/css/style.scss" />
 
     <!-- Font Icons -->
 
-    <link rel="stylesheet" href="./assets/scss/font-icons.css" />
+    <link rel="stylesheet" href="./assets/css/font-icons.css" />
 
-    <link rel="stylesheet" href="./assets/scss/car-icons.css" />
+    <link rel="stylesheet" href="./assets/css/car-icons.css" />
 
     <!-- Plugins/Components CSS -->
 
-    <link rel="stylesheet" href="./assets/scss/swiper.css" />
+    <link rel="stylesheet" href="./assets/css/swiper.css" />
 
-    <link rel="stylesheet" href="./assets/scss/components/bs-select.css" />
+    <link rel="stylesheet" href="./assets/css/components/bs-select.css" />
 
-    <link rel="stylesheet" href="./assets/css/layers.css" />
+    <link rel="stylesheet" href="./include/rs-plugin/css/layers.css" />
 
-    <link rel="stylesheet" href="./assets/css/settings.css" />
+    <link rel="stylesheet" href="./include/rs-plugin/css/settings.css" />
 
-    <link rel="stylesheet" href="./assets/css/navigation.css" />
+    <link rel="stylesheet" href="./include/rs-plugin/css/navigation.css" />
 
-    <link rel="stylesheet" href="./assets/scss/car.css" />
+    <link rel="stylesheet" href="./assets/css/car.css" />
     <!-- Custom CSS -->
 
-    <link rel="stylesheet" href="./assets/scss/custom.css" />
+    <link rel="stylesheet" href="./assets/css/custom.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<script assets="./assets/js/main.js" defer type="module"></script>
 
     <!-- Document Title
 
 	============================================= -->
 
     <title>
-      BORCELLE | Ремонт люкс авто, авто из США, предпродажная подготовка
+      BORCELLE | Эксклюзивные авто из США — ваш статус начинается здесь
     </title>
 
     <style>
@@ -98,12 +96,32 @@
         width: 80px;
         height: 80px;
       }
+      .overlay::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* Черный цвет с 50% прозрачностью */
+        z-index: 1;
+      }
+
+      .overlay > * {
+        position: relative;
+        z-index: 2;
+      }
     </style>
   </head>
 
   <body
     class="stretched side-push-panel"
-    data-loader-html="<div><img assets='./assets/img/page-loader.gif' alt='Loader'></div>"
+    data-loader-html="<div><img src='assets/images/page-loader.gif' alt='Loader'></div>"
   >
     <!-- Side Panel Overlay -->
 
@@ -118,18 +136,12 @@
 
       <div class="side-panel-wrap">
         <div class="widget">
-          <a href="index.html"
-            ><img assets="./assets/img/logo@2x.png" alt="Canvas Logo" height="50"
-          /></a>
+          <a href="index.html">BORCELLE AUTO</a>
 
-          <p>
-            It has always been, and will always be, about quality. We're
-            passionate about ethically sourcing the finest coffee beans,
-            roasting them with great care. We'd like to hear your message!
-          </p>
+          <p>Эксклюзивные авто из США — ваш статус начинается здесь</p>
 
           <div class="widget quick-contact-widget form-widget border-0 pt-0">
-            <h4>Quick Contact</h4>
+            <h4>Свяжитесь с нами</h4>
 
             <div class="form-result"></div>
 
@@ -190,7 +202,7 @@
                 class="button button-small button-3d m-0"
                 value="submit"
               >
-                Send Email
+                Отправить сообщение
               </button>
             </form>
           </div>
@@ -221,7 +233,9 @@
 
               <div id="logo" class="me-lg-0 ms-lg-auto">
                 <a href="index.html">
-                  <p class="mb-0 fw-bold text-muted">BORCELLE</p>
+                  <p class="mb-0 fw-bold text-muted">
+                    BORCELLE <span class="text-danger fw-light">AUTO</span>
+                  </p>
                 </a>
               </div>
               <!-- #logo end -->
@@ -245,35 +259,44 @@
               <nav class="primary-menu with-arrows">
                 <ul class="menu-container">
                   <li class="menu-item current">
-                    <a class="menu-link" href="index.html"
-                      ><div>Главная</div></a
-                    >
+                    <a class="menu-link" href="index.html">
+                      <div>Главная</div>
+                    </a>
                   </li>
 
                   <li class="menu-item">
-                    <a class="menu-link" href="usa-auto.html"
-                      ><div>Авто из США</div></a
-                    >
+                    <a class="menu-link" href="usa-auto.html">
+                      <div>Авто из США</div>
+                    </a>
                   </li>
 
                   <li class="menu-item">
-                    <a class="menu-link" href="services.html"
-                      ><div>Наши услуги</div></a
-                    >
+                    <a class="menu-link" href="services.html">
+                      <div>Наши услуги</div>
+                    </a>
                   </li>
 
                   <li class="menu-item">
-                    <a class="menu-link" href="faqs.html"><div>FAQs</div></a>
+                    <a class="menu-link" href="faqs.html">
+                      <div>FAQs</div>
+                    </a>
+                  </li>
+                  <li class="menu-item">
+                    <a class="menu-link" href="about.html">
+                      <div>О нас</div>
+                    </a>
                   </li>
 
                   <li class="menu-item">
-                    <a class="menu-link" href="blog.html"><div>Блог</div></a>
+                    <a class="menu-link" href="blog.html">
+                      <div>Блог</div>
+                    </a>
                   </li>
 
                   <li class="menu-item">
-                    <a class="menu-link" href="contact.html"
-                      ><div>Контакты</div></a
-                    >
+                    <a class="menu-link" href="contact.html">
+                      <div>Контакты</div>
+                    </a>
                   </li>
                 </ul>
               </nav>
@@ -304,12 +327,12 @@
                 <div class="slider-caption top-left">
                   <div>
                     <h2 class="font-primary text-transform-none">
-                      Эксклюзивный сервис для элитных автомобилей
+                      Эксклюзивные авто из США — ваш статус начинается здесь
                     </h2>
 
                     <p class="fw-light font-primary d-none d-sm-block">
-                      Полный цикл обслуживания: от детейлинга до глубокой
-                      диагностики с использованием оригинальных запчастей
+                      Mercedes-Benz G-Class, Cadillac Escalade, Tesla Model X и
+                      другие люксовые модели с полной историей и гарантией
                     </p>
 
                     <a
@@ -323,7 +346,7 @@
 
               <div
                 class="swiper-slide-bg"
-                style="background-image: url('./assets/img/hero-slider/4.jpg')"
+                style="background-image: url('assets/images/hero-slider/4.jpg')"
               ></div>
             </div>
 
@@ -332,12 +355,12 @@
                 <div class="slider-caption">
                   <div>
                     <h2 class="font-primary text-transform-none">
-                      Сохранение гарантии дилера — наш приоритет
+                      Помощь в покупке авто из США
                     </h2>
 
                     <p class="fw-light font-primary d-none d-sm-block">
-                      Партнерские программы с дилерами Европы для поставки
-                      редких запчастей
+                      Полное сопровождение сделки: от выбора модели до получения
+                      номера
                     </p>
 
                     <a
@@ -351,7 +374,7 @@
 
               <div
                 class="swiper-slide-bg"
-                style="background-image: url('./assets/img/hero-slider/2.jpg')"
+                style="background-image: url('assets/images/hero-slider/2.jpg')"
               ></div>
             </div>
 
@@ -360,12 +383,11 @@
                 <div class="slider-caption slider-caption-center">
                   <div>
                     <h2 class="font-primary text-transform-none">
-                      Конфиденциальность
+                      Обслуживание люксовых автомобилей
                     </h2>
 
                     <p class="fw-light font-primary d-none d-sm-block">
-                      Персональный подход — как у дома́шнего механика, но с
-                      технологиями F1
+                      Профессиональный сервис для премиальных брендов
                     </p>
 
                     <a
@@ -379,7 +401,7 @@
 
               <div
                 class="swiper-slide-bg"
-                style="background-image: url('./assets/img/hero-slider/3.jpg')"
+                style="background-image: url('assets/images/hero-slider/3.jpg')"
               ></div>
             </div>
           </div>
@@ -411,8 +433,8 @@
               href="usa-auto.html"
               class="col-md-4 image_fade border-right"
               style="
-                background: url('./assets/img/categories/1.jpg') no-repeat center
-                  center / cover;
+                background: url('assets/images/categories/1.jpg') no-repeat
+                  center center / cover;
               "
             >
               <div class="bg-overlay">
@@ -432,8 +454,8 @@
               href="services.html"
               class="col-md-4 image_fade p-0 border-right"
               style="
-                background: url('./assets/img/categories/2.jpg') no-repeat center
-                  center / cover;
+                background: url('assets/images/categories/2.jpg') no-repeat
+                  center center / cover;
               "
             >
               <div class="bg-overlay">
@@ -453,8 +475,8 @@
               href="contact.html"
               class="col-md-4 image_fade p-0"
               style="
-                background: url('./assets/img/categories/3.jpg') no-repeat center
-                  center / cover;
+                background: url('assets/images/categories/3.jpg') no-repeat
+                  center center / cover;
               "
             >
               <div class="bg-overlay">
@@ -477,11 +499,15 @@
 
           <div class="section mt-0" style="padding: 100px 0">
             <div class="running-car mt-6">
-              <img class="car" assets="./assets/img/moving-car/car.jpg" alt="Image" />
+              <img
+                class="car"
+                src="assets/images/moving-car/car.jpg"
+                alt="Image"
+              />
 
               <img
                 class="wheel"
-                assets="./assets/img/moving-car/car-tier.png"
+                src="assets/images/moving-car/car-tier.png"
                 alt="Image"
               />
             </div>
@@ -490,40 +516,33 @@
               <div class="row" style="position: relative">
                 <div class="col-lg-6 offset-lg-6">
                   <div class="heading-block h-large">
-                    <h3>
-                      Почему владельцы Maybach и Bentley <br />выбирают нас?
-                    </h3>
+                    <h3 class="text-uppercase">Почему выбирают нас?</h3>
                   </div>
 
                   <ul class="list-unstyled fs-5 fw-light text-muted">
                     <li class="li">
                       <p>
-                        12 лет работы исключительно с автомобилями класса
-                        Premium/Luxury
+                        Аукционы США без посредников<br />
+                        Индивидуальный подход к каждому клиенту
                       </p>
                     </li>
                     <li class="li">
                       <p>
-                        Сертифицированные мастера (Mercedes-Benz Classic, BMW
-                        Group Training)
+                        100% прозрачность<br />
+                        Оперативность на всех этапах сделки
                       </p>
                     </li>
                     <li class="li">
                       <p>
-                        Закрытая охраняемая зона хранения с климат-контролем
+                        Гарантии безопасности<br />
+                        Профессиональная команда специалистов
                       </p>
                     </li>
                     <li class="li">
-                      <p>
-                        Партнерские программы с дилерами Европы для поставки
-                        редких запчастей
-                      </p>
+                      <p>Полное документальное сопровождение</p>
                     </li>
                     <li class="li">
-                      <p>
-                        Конфиденциальность: номерные знаки на фото только с
-                        вашего согласия
-                      </p>
+                      <p>Гарантия качества предоставляемых услуг</p>
                     </li>
                   </ul>
                 </div>
@@ -544,12 +563,11 @@
                     class="text-transform-none ls-0"
                     style="font-size: 44px; line-height: 1.2"
                   >
-                    Электромобили — это просто. Когда их обслуживают
-                    профессионалы
+                    Автосервис и ремонт
                   </h2>
                 </div>
 
-                <span style="color: #bbb"
+                <span style="color: #5f5f5f"
                   >Сохранение гарантии: Используем только OEM-инструменты и
                   одобренные производителем процедуры.<br /><br />Экспертиза:
                   Наши инженеры прошли обучение у Tesla, Porsche и Rimac.<br /><br />Экологичность:
@@ -563,13 +581,13 @@
 
                 <a
                   href="usa-auto.html"
-                  class="button button-rounded button-black button-dark ms-0 mt-4"
+                  class="button button-rounded button-primary ms-0 mt-4"
                   >Записаться на диагностику батареи</a
                 >
               </div>
 
               <div class="col-lg-4 d-md-none d-lg-block text-center">
-                <img assets="./assets/img/features/bg1.png" alt="Car" />
+                <img src="assets/images/features/bg1.png" alt="Car" />
               </div>
 
               <div class="col-lg-4 col-md-6 mt-5 mb-4">
@@ -625,11 +643,13 @@
           <!-- Revolution Slider
 
 				============================================= -->
-
+          <div class="container heading-block h-large border-bottom-0">
+            <h3 class="text-uppercase ls-0 mt-6">Наши автомобили</h3>
+          </div>
           <div
             class="section mb-0"
             style="
-              background: #fff url('./assets/img/revslider/bg.png') center 70%
+              background: #fff url('assets/images/revslider/bg.png') center 70%
                 no-repeat;
               background-size: 100% auto;
               padding: 100px 0 10px;
@@ -664,7 +684,7 @@
                       data-easein="default"
                       data-easeout="default"
                       data-masterspeed="300"
-                      data-thumb="./assets/img/revslider/1.png"
+                      data-thumb="assets/images/revslider/1.png"
                       data-rotate="0"
                       data-saveperformance="off"
                       data-title="BMW 3 Series Sedan"
@@ -683,9 +703,9 @@
                       <!-- MAIN IMAGE -->
 
                       <img
-                        assets="./assets/img/dummy.png"
+                        src="./include/rs-plugin/demos/assets/images/dummy.png"
                         alt="Image"
-                        data-lazyload="./assets/img/revslider/1.png"
+                        data-lazyload="assets/images/revslider/1.png"
                         data-bgposition="left center"
                         data-bgfit="contain"
                         data-bgrepeat="no-repeat"
@@ -865,7 +885,7 @@
                       data-easein="default"
                       data-easeout="default"
                       data-masterspeed="300"
-                      data-thumb="./assets/img/revslider/2.png"
+                      data-thumb="assets/images/revslider/2.png"
                       data-rotate="0"
                       data-saveperformance="off"
                       data-title="Audi A4 - White"
@@ -884,9 +904,9 @@
                       <!-- MAIN IMAGE -->
 
                       <img
-                        assets="./assets/img/dummy.png"
+                        src="./include/rs-plugin/demos/assets/images/dummy.png"
                         alt="Image"
-                        data-lazyload="./assets/img/revslider/2.png"
+                        data-lazyload="assets/images/revslider/2.png"
                         data-bgposition="left center"
                         data-bgfit="contain"
                         data-bgrepeat="no-repeat"
@@ -1064,7 +1084,7 @@
                       data-easein="default"
                       data-easeout="default"
                       data-masterspeed="300"
-                      data-thumb="./assets/img/revslider/3.png"
+                      data-thumb="assets/images/revslider/3.png"
                       data-rotate="0"
                       data-saveperformance="off"
                       data-title="Brand New Mustand"
@@ -1083,9 +1103,9 @@
                       <!-- MAIN IMAGE -->
 
                       <img
-                        assets="./assets/img/dummy.png"
+                        src="./include/rs-plugin/demos/assets/images/dummy.png"
                         alt="Image"
-                        data-lazyload="./assets/img/revslider/3.png"
+                        data-lazyload="assets/images/revslider/3.png"
                         data-bgposition="left center"
                         data-bgfit="contain"
                         data-bgrepeat="no-repeat"
@@ -1265,7 +1285,7 @@
                       data-easein="default"
                       data-easeout="default"
                       data-masterspeed="300"
-                      data-thumb="./assets/img/revslider/4.png"
+                      data-thumb="assets/images/revslider/4.png"
                       data-rotate="0"
                       data-saveperformance="off"
                       data-title="Audi A3 Cabriolet"
@@ -1284,9 +1304,9 @@
                       <!-- MAIN IMAGE -->
 
                       <img
-                        assets="./assets/img/dummy.png"
+                        src="./include/rs-plugin/demos/assets/images/dummy.png"
                         alt="Image"
-                        data-lazyload="./assets/img/revslider/4.png"
+                        data-lazyload="assets/images/revslider/4.png"
                         data-bgposition="left center"
                         data-bgfit="contain"
                         data-bgrepeat="no-repeat"
@@ -1466,7 +1486,7 @@
                       data-easein="default"
                       data-easeout="default"
                       data-masterspeed="300"
-                      data-thumb="./assets/img/revslider/5.png"
+                      data-thumb="assets/images/revslider/5.png"
                       data-rotate="0"
                       data-saveperformance="off"
                       data-title="Mercedes-Benz E-Class"
@@ -1485,9 +1505,9 @@
                       <!-- MAIN IMAGE -->
 
                       <img
-                        assets="./assets/img/dummy.png"
+                        src="./include/rs-plugin/demos/assets/images/dummy.png"
                         alt="Image"
-                        data-lazyload="./assets/img/revslider/5.png"
+                        data-lazyload="assets/images/revslider/5.png"
                         data-bgposition="left center"
                         data-bgfit="contain"
                         data-bgrepeat="no-repeat"
@@ -1671,7 +1691,7 @@
           <div
             class="section dark mb-0"
             style="
-              background: #fff url('./assets/img/1.jpg') right bottom no-repeat;
+              background: #fff url('assets/images/1.jpg') right bottom no-repeat;
               background-size: cover;
               padding: 80px 0 40px;
             "
@@ -1680,9 +1700,7 @@
               <div class="row">
                 <div class="col-lg-8">
                   <div class="heading-block border-0 mb-0 text-center">
-                    <h3 style="font-size: 32px; font-weight: 700">
-                      360 Degree Drag
-                    </h3>
+                    <h3 style="font-size: 32px; font-weight: 700">3D-обзор</h3>
                   </div>
 
                   <!-- 360 degree Car Content -->
@@ -1708,14 +1726,12 @@
                             font-weight: 700;
                           "
                         >
-                          Select other Models
+                          Выбрать автомобиль
                         </h3>
 
                         <span
-                          >Intrinsicly formulate plug-and-play systems with
-                          interactive communities. Quickly aggregate
-                          plug-and-play.</span
-                        >
+                          >Выберите автомобиль, который вас интересует
+                        </span>
                       </div>
 
                       <form
@@ -1879,7 +1895,7 @@
                             name="login-form-submit"
                             value="login"
                           >
-                            Search
+                            Выбрать
                           </button>
                         </div>
                       </form>
@@ -1907,14 +1923,7 @@
 
           <div class="section m-0 bg-transparent" style="padding: 100px 0">
             <div class="container">
-              <div class="heading-block text-center">
-                <div
-                  class="before-heading text-uppercase ls-1"
-                  style="font-size: 13px; font-style: normal"
-                >
-                  можно посмотреть в нашем салоне
-                </div>
-
+              <div class="heading-block h-large text-center">
                 <h3 class="fw-bold">Сейчас в наличии</h3>
               </div>
 
@@ -1982,9 +1991,9 @@
                 >
                   <div class="grid-inner">
                     <div class="portfolio-image">
-                      <a href="usa-auto.html">
+                      <a href="car-details.html">
                         <img
-                          assets="./assets/img/filter-cars/1.jpg"
+                          src="assets/images/filter-cars/1.jpg"
                           alt="Open Imagination"
                         />
 
@@ -2000,7 +2009,7 @@
 
                     <div class="portfolio-desc">
                       <h3>
-                        <a href="usa-auto.html">Ford Mustang - White</a>
+                        <a href="car-details.html">Ford Mustang - White</a>
                       </h3>
 
                       <span
@@ -2043,9 +2052,9 @@
                 <article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-suv">
                   <div class="grid-inner">
                     <div class="portfolio-image">
-                      <a href="usa-auto.html">
+                      <a href="car-details.html">
                         <img
-                          assets="./assets/img/filter-cars/2.jpg"
+                          src="assets/images/filter-cars/2.jpg"
                           alt="Open Imagination"
                         />
 
@@ -2061,7 +2070,7 @@
 
                     <div class="portfolio-desc">
                       <h3>
-                        <a href="usa-auto.html">Chevrolet Brown Traverse</a>
+                        <a href="car-details.html">Chevrolet Brown Traverse</a>
                       </h3>
 
                       <span
@@ -2106,9 +2115,9 @@
                 >
                   <div class="grid-inner">
                     <div class="portfolio-image">
-                      <a href="usa-auto.html">
+                      <a href="car-details.html">
                         <img
-                          assets="./assets/img/filter-cars/3.jpg"
+                          src="assets/images/filter-cars/3.jpg"
                           alt="Open Imagination"
                         />
 
@@ -2124,7 +2133,7 @@
 
                     <div class="portfolio-desc">
                       <h3>
-                        <a href="usa-auto.html">Audi 2021 S5 Cabriolet</a>
+                        <a href="car-details.html">Audi 2021 S5 Cabriolet</a>
                       </h3>
 
                       <span
@@ -2163,9 +2172,9 @@
                 <article class="portfolio-item col-12 col-sm-6 col-lg-4 cf-cuv">
                   <div class="grid-inner">
                     <div class="portfolio-image">
-                      <a href="usa-auto.html">
+                      <a href="car-details.html">
                         <img
-                          assets="./assets/img/filter-cars/4.jpg"
+                          src="assets/images/filter-cars/4.jpg"
                           alt="Open Imagination"
                         />
 
@@ -2181,7 +2190,7 @@
 
                     <div class="portfolio-desc">
                       <h3>
-                        <a href="usa-auto.html">BMW 3 Series, ABS</a>
+                        <a href="car-details.html">BMW 3 Series, ABS</a>
                       </h3>
 
                       <span
@@ -2222,9 +2231,9 @@
                 >
                   <div class="grid-inner">
                     <div class="portfolio-image">
-                      <a href="usa-auto.html">
+                      <a href="car-details.html">
                         <img
-                          assets="./assets/img/filter-cars/5.jpg"
+                          src="assets/images/filter-cars/5.jpg"
                           alt="Open Imagination"
                         />
 
@@ -2240,7 +2249,7 @@
 
                     <div class="portfolio-desc">
                       <h3>
-                        <a href="usa-auto.html">2021 LEXUS IS 200T FSPORT</a>
+                        <a href="car-details.html">2021 LEXUS IS 200T FSPORT</a>
                       </h3>
 
                       <span
@@ -2285,9 +2294,9 @@
                 >
                   <div class="grid-inner">
                     <div class="portfolio-image">
-                      <a href="usa-auto.html">
+                      <a href="car-details.html">
                         <img
-                          assets="./assets/img/filter-cars/6.jpg"
+                          src="assets/images/filter-cars/6.jpg"
                           alt="Open Imagination"
                         />
 
@@ -2303,7 +2312,7 @@
 
                     <div class="portfolio-desc">
                       <h3>
-                        <a href="usa-auto.html">Chevrolet T430 Hatchback</a>
+                        <a href="car-details.html">Chevrolet T430 Hatchback</a>
                       </h3>
 
                       <span
@@ -2350,8 +2359,8 @@
 				============================================= -->
 
           <div class="section m-0 overflow-hidden">
-            <div class="heading-block mb-0 text-center">
-              <h2>Видео галерея</h2>
+            <div class="heading-block h-large mb-0 text-center">
+              <h3>Видео галерея</h3>
             </div>
           </div>
 
@@ -2378,13 +2387,16 @@
                   <div class="video-wrap no-placeholder">
                     <video
                       id="slide-video-1"
-                      poster="./assets/img/videos/1.jpg"
+                      poster="assets/images/videos/1.jpg"
                       preload="auto"
                       loop
                       muted
                       playsinline
                     >
-                      <source assets="./assets/img/videos/1.mp4" type="video/mp4" />
+                      <source
+                        src="assets/images/videos/1.mp4"
+                        type="video/mp4"
+                      />
                     </video>
 
                     <div
@@ -2413,13 +2425,16 @@
                   <div class="video-wrap no-placeholder">
                     <video
                       id="slide-video-2"
-                      poster="./assets/img/videos/2.jpg"
+                      poster="assets/images/videos/2.jpg"
                       preload="auto"
                       loop
                       muted
                       playsinline
                     >
-                      <source assets="./assets/img/videos/2.mp4" type="video/mp4" />
+                      <source
+                        src="assets/images/videos/2.mp4"
+                        type="video/mp4"
+                      />
                     </video>
 
                     <div
@@ -2448,13 +2463,16 @@
                   <div class="video-wrap no-placeholder">
                     <video
                       id="slide-video-3"
-                      poster="./assets/img/videos/3.jpg"
+                      poster="assets/images/videos/3.jpg"
                       preload="auto"
                       loop
                       muted
                       playsinline
                     >
-                      <source assets="./assets/img/videos/3.mp4" type="video/mp4" />
+                      <source
+                        src="assets/images/videos/3.mp4"
+                        type="video/mp4"
+                      />
                     </video>
 
                     <div
@@ -2483,13 +2501,16 @@
                   <div class="video-wrap no-placeholder">
                     <video
                       id="slide-video-4"
-                      poster="./assets/img/videos/4.jpg"
+                      poster="assets/images/videos/4.jpg"
                       preload="auto"
                       loop
                       muted
                       playsinline
                     >
-                      <source assets="./assets/img/videos/4.mp4" type="video/mp4" />
+                      <source
+                        src="assets/images/videos/4.mp4"
+                        type="video/mp4"
+                      />
                     </video>
 
                     <div
@@ -2591,7 +2612,7 @@
           <div
             class="section m-0"
             style="
-              background: #fff url('./assets/img/features/section-bg.jpg') left
+              background: #fff url('assets/images/features/section-bg.jpg') left
                 bottom no-repeat;
               background-size: cover;
               padding: 140px 0;
@@ -2608,17 +2629,27 @@
                         letter-spacing: -2px;
                       "
                     >
-                      Our Fleet<br />Your Fleet
+                      Наша<br />миссия
                     </h3>
                   </div>
 
-                  <p>
-                    Assertively iterate enterprise-wide portals through
-                    synergistic products. Efficiently build adaptive schemas
-                    after transparent quality vectors. Phosfluorescently
-                    optimize competitive resources after extensive convergence.
-                    Rapidiously optimize high-quality meta-services via
-                    distributed architectures. Credibly deliver 24/365.
+                  <p class="fs-5 fw-light text-muted">
+                    Мы стремимся сделать процесс покупки автомобиля из США
+                    максимально простым, безопасным и выгодным для наших
+                    клиентов. Наша цель – предоставить вам доступ к качественным
+                    автомобилям по справедливым ценам.
+                    <br />
+                    <span class="text-danger fw-bold">BORCELLE AUTO</span> — ваш
+                    надежный партнер в покупке элитных авто из США. Мы работаем
+                    с аукционами Copart и Manheim, чтобы предложить вам лучшие
+                    модели: Cadillac Escalade, Chevrolet Corvette, Tesla
+                    Cybertruck и другие. Наши эксперты проверяют историю авто
+                    через Carfax, организуют доставку контейнером или ролкером,
+                    помогают с растаможкой по закону ЕАЭС. Для клиентов —
+                    гарантия 12 месяцев и сервисное обслуживание у
+                    дилеров-партнеров. Рассчитайте стоимость авто с доставкой
+                    через наш онлайн-калькулятор и получите персонального
+                    менеджера.
                   </p>
 
                   <div class="row mt-5">
@@ -2629,12 +2660,10 @@
                         </div>
 
                         <div class="fbox-content" style="margin-top: 25px">
-                          <h3>Skilled Professionals.</h3>
+                          <h3>Дополнительные услуги</h3>
 
                           <p class="fw-light" style="color: #666">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Eligendi rem, facilis nobis voluptatum est
-                            perspiciatis mollitia.
+                            Закупка и доставка запчастей
                           </p>
                         </div>
                       </div>
@@ -2647,12 +2676,10 @@
                         </div>
 
                         <div class="fbox-content" style="margin-top: 25px">
-                          <h3>Skilled Professionals.</h3>
+                          <h3>Дополнительные услуги</h3>
 
                           <p class="fw-light" style="color: #666">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing
-                            elit. Eligendi rem, facilis nobis voluptatum est
-                            perspiciatis mollitia.
+                            Эвакуатор 24/7
                           </p>
                         </div>
                       </div>
@@ -2675,7 +2702,7 @@
               <div
                 class="col-lg-6 dark bg-color"
                 style="
-                  background: url('./assets/img/5.jpg') center center no-repeat;
+                  background: url('assets/images/5.jpg') center center no-repeat;
                   background-size: cover;
                 "
               >
@@ -2711,7 +2738,7 @@
               <div
                 class="col-lg-6 bg-color"
                 style="
-                  background: url('./assets/img/6.jpg') center center no-repeat;
+                  background: url('assets/images/6.jpg') center center no-repeat;
                   background-size: cover;
                 "
               >
@@ -2749,30 +2776,33 @@
 				============================================= -->
 
           <div
-            class="section m-0"
+            class="section m-0 overlay"
             style="
-              background: #fff url('./assets/img/footer-bg.jpg') center bottom
+              background: #fff url('assets/images/footer-bg.jpg') center bottom
                 no-repeat;
               background-size: cover;
               height: 770px;
             "
           >
-            <div class="mx-auto dark center" style="max-width: 570px">
+            <div class="mx-auto dark center" style="max-width: 1280px">
               <div class="heading-block dark mb-4 border-0">
-                <h2 class="text-transform-none fw-medium">Raise Your Heart</h2>
+                <h2 class="text-transform-none fw-medium">
+                  BORCELLE <span class="text-danger">AUTO</span>
+                </h2>
 
-                <p style="color: #ddd; margin-top: 10px">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-                  ipsa necessitatibus rem facere perspiciatis neque laborum est,
-                  illum commodi sunt, nobis voluptas.
-                </p>
+                <h3 style="color: #ddd; margin-top: 10px; line-height: 1.8; font-weight: 900;">
+                  Эксклюзивные авто из США — ваш статус начинается здесь Полный
+                  цикл. От подбора автомобиля в США, оформления покупки, до его
+                  обслуживания: от детейлинга до глубокой диагностики с
+                  использованием оригинальных запчастей
+                </h3>
               </div>
 
               <a
                 href="contact.html"
-                class="text-uppercase fw-bold ls-2 text-white"
+                class="text-uppercase fw-bold ls-2 text-danger"
                 style="font-size: 12px; border-bottom: 1px solid #fff"
-                >Request a Quote</a
+                >Заказать консультацию</a
               >
               &rarr;
             </div>
@@ -2801,58 +2831,53 @@
                 <div class="row col-mb-30">
                   <div class="col-6 col-lg-3">
                     <div class="widget widget_links widget-li-noicon">
-                      <h4>Hire</h4>
+                      <h4>BORCELLE AUTO</h4>
 
                       <ul>
-                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Главная</a></li>
 
-                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">О нас</a></li>
 
-                        <li><a href="#">Plugins</a></li>
+                        <li><a href="#">Автомобили</a></li>
+
+                        <li><a href="#">Контакты</a></li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="col-6 col-lg-3">
                     <div class="widget widget_links widget-li-noicon">
-                      <h4>Community</h4>
+                      <h4>Полезные ссылки</h4>
 
                       <ul>
-                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Дополнительные услуги</a></li>
 
-                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Гарантия</a></li>
 
-                        <li><a href="#">Plugins</a></li>
-
-                        <li><a href="#">Support Forums</a></li>
+                        <li><a href="#">Сертификаты</a></li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="col-6 col-lg-3">
                     <div class="widget widget_links widget-li-noicon">
-                      <h4>Learn</h4>
+                      <h4>Мы в социальных сетях</h4>
 
                       <ul>
-                        <li><a href="#">Documentation</a></li>
+                        <li>
+                          <i class="bi-instagram text-white me-2"></i>
+                          <a href="#">Instagram</a>
+                        </li>
 
-                        <li><a href="#">Feedback</a></li>
+                        <li>
+                          <i class="bi-telegram text-white me-2"></i>
+                          <a href="#">Telegram</a>
+                        </li>
 
-                        <li><a href="#">Plugins</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="col-6 col-lg-3">
-                    <div class="widget widget_links widget-li-noicon">
-                      <h4>About</h4>
-
-                      <ul>
-                        <li><a href="#">Documentation</a></li>
-
-                        <li><a href="#">Feedback</a></li>
-
-                        <li><a href="#">Plugins</a></li>
+                        <li>
+                          <i class="bi-whatsapp text-white me-2"></i>
+                          <a href="#">WhatsApp</a>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -2860,18 +2885,17 @@
               </div>
 
               <div class="col-lg-5 text-center text-lg-end">
-                <img assets="./assets/img/logo-footer.png" alt="Image" height="50" />
+                <p>BORCELLE AUTO</p>
 
                 <br />
 
                 <div style="color: #444">
-                  <span>&copy; Canvas Automotive. All Rights Reserved.</span>
+                  <span>&copy; BORCELLE AUTO. All Rights Reserved.</span>
 
                   <div class="clear"></div>
 
                   <p style="margin-top: 10px">
-                    Objectively restore standards compliant opportunities
-                    whereas one-to-one collaboration and idea-sharing.
+                    Эксклюзивные авто из США — ваш статус начинается здесь
                   </p>
                 </div>
               </div>
@@ -2899,40 +2923,40 @@
     <!-- JavaScripts
 
 	============================================= -->
- 
-    <script assets="./assets/js/plugins.min.js"></script>
 
-    <script assets="./assets/js/functions.bundle.js"></script>
+    <script src="js/plugins.min.js"></script>
 
-    <script assets="./assets/js/360rotator.js"></script> 
+    <script src="js/functions.bundle.js"></script>
+
+    <script src="./assets/js/360rotator.js"></script>
 
     <!-- Bootstrap Select Plugin -->
 
-     <script assets="./assets/js/components/bs-select.js"></script> 
+    <script src="js/components/bs-select.js"></script>
 
     <!-- SLIDER REVOLUTION 5.x SCRIPTS  -->
- 
-    <script assets="./assets/js/jquery.themepunch.tools.min.js"></script>
 
-    <script assets="./assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="include/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="include/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="include/rs-plugin/js/extensions/revolution.extension.actions.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="include/rs-plugin/js/extensions/revolution.extension.carousel.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="include/rs-plugin/js/extensions/revolution.extension.kenburn.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="include/rs-plugin/js/extensions/revolution.extension.layeranimation.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="include/rs-plugin/js/extensions/revolution.extension.migration.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="include/rs-plugin/js/extensions/revolution.extension.navigation.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="include/rs-plugin/js/extensions/revolution.extension.parallax.min.js"></script>
 
-    <script assets="./assets/js/extensions/revolution.extension.video.min.js"></script> 
+    <script src="include/rs-plugin/js/extensions/revolution.extension.slideanims.min.js"></script>
+
+    <script src="include/rs-plugin/js/extensions/revolution.extension.video.min.js"></script>
 
     <script>
       //Car Appear In View
@@ -2977,7 +3001,7 @@
 
           progress: ".spinner", // selector to show the loading progress
 
-          imagePath: "./assets/img/360degree-cars/", // path of the image assets
+          imagePath: "assets/images/360degree-cars/", // path of the image assets
 
           filePrefix: "", // file prefix if any
 
